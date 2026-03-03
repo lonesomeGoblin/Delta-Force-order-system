@@ -2,8 +2,8 @@
   "name": "delta-force",
   "private": "true",
   "type": "module",
-  "engines": {},
   "scripts": {
+    "preinstall": "npx only-allow pnpm",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:all": "pnpm --filter=./packages/* run dev",
     "dev:web": "pnpm --filter=./packages/web run dev",
@@ -12,5 +12,14 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017"
+  "packageManager": "pnpm@10.30.3+sha512.c961d1e0a2d8e354ecaa5166b822516668b7f44cb5bd95122d590dd81922f606f5473b6d23ec4a5be05e7fcd18e8488d47d978bbe981872f1145d06e9a740017",
+  "engineStrict": true,
+  "engines": {
+    "node": ">=24.14.0",
+    "pnpm": ">=10.23.0"
+  },
+  "devDependencies": {
+    "only-allow": "^1.2.2",
+    "prettier": "^3.8.1"
+  }
 }
