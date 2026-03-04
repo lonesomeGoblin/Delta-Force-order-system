@@ -4,10 +4,7 @@
   "type": "module",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:all": "pnpm --filter=./packages/* run dev",
-    "dev:web": "pnpm --filter=./packages/web run dev",
-    "dev:service": "pnpm --filter=./packages/service run dev"
+    "dev:all": "pnpm --filter=./packages/* run dev"
   },
   "keywords": [],
   "author": "",
