@@ -1,6 +1,13 @@
 import express, { json, urlencoded } from "express";
 import cors from "cors";
-import prisma from "./client.js";
+import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
+import { PrismaClient } from "./generated/sqlite-client/client.ts";
+
+const adapter = new PrismaBetterSqlite3({ url: "file:./database/dev.db" });
+
+console.log({ adapter });
+
+const prisma = new PrismaClient({ adapter });
 
 const app = express();
 
@@ -21,6 +28,8 @@ app.get("/add", async (req, res) => {
       email: "******@gmail.com",
     },
   });
+
+  console.log({ data });
 });
 
 app.listen(3000, () => {

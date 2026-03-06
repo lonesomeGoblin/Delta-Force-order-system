@@ -6,12 +6,11 @@
 
 generator client {
   provider = "prisma-client"
-  output   = "./client"
+  output   = "../generated/sqlite-client"
 }
 
 datasource db {
   provider = "sqlite"
-  url      = "file:./database/dev.db"
 }
 
 model user {
